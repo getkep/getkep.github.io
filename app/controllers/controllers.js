@@ -6,6 +6,10 @@ app.controller('docsController', function($scope, $http, $location){
 
 });
 
+app.controller('aboutController', function($scope, $http, $location){
+
+});
+
 app.controller('routingController', function($scope, $http, $location){
 
 });

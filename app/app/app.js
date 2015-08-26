@@ -15,6 +15,11 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl : 'app/views/home.html',
       controller  : 'homeController',
    })
+   .when('/about', {
+      title       : 'Sobre - Kep Framework for PHP',
+      templateUrl : 'app/views/about.html',
+      controller  : 'aboutController',
+   })
    .when('/docs', {
       title       : 'Documentation - Kep Framework for PHP',
       templateUrl : 'app/views/docs.html',
