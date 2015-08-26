@@ -1,0 +1,291 @@
+	<div class="index">
+		<div class="container">
+		<div class="browser">
+			<div class="top-bar">
+				<div class="circles">
+					<div class="circle circle-red"></div>
+					<div class="circle circle-yellow"></div>
+					<div class="circle circle-green"></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="line-numbers">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<div class="content-php">
+					<span class="php-line">
+						<span class="php-metatag">&lt;php</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">require_once</span>
+						<span>(</span>
+						<span class="php-string">"../kep/autoload.php"</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">use</span>
+						<span>route\Route;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>Route::group(</span>
+						<span class="php-string">"api/v2"</span>
+						<span>, </span>
+						<span class="php-keyword">function</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>Route::post(</span>
+						<span class="php-string">"tickets"</span>
+						<span>, [</span>
+						<span class="php-string">'uses'</span>
+						<span> => </span>
+						<span class="php-string">'SupportController@tickets'</span>
+						<span>]);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>Route::post(</span>
+						<span class="php-string">""</span>
+						<span>, </span>
+						<span class="php-keyword">function</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">echo</span>
+						<span> </span>
+						<span class="php-string">"API Kep Framework"</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>});</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>});</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	<div class="single-text">
+		<p>CRIADO PARA INICIANTES</p>
+	</div>
+	<div class="container container-body">
+		<div class="grid grid-12 gray border">
+			<div class="jumbotron">
+				<div class="image-coder"></div>
+				<div class="text">
+					<h3>Facilidade no aprendizado</h3>
+					<span>O Kep Framework desenvolvido para iniciantes poderem se <br>
+					familiarizar com uma framework antes ir para algo mais <br>
+					profissional, como o <b>Laravel</b></span>
+					<br /><br />
+					<a href="#" class="btn btn-download"><span>BETA</span>DOWNLOAD V0.1</a>
+				</div>
+			</div>
+		</div>
+		<div class="grid grid-12">
+			<div class="grid grid-6" align="center">
+				<div class="img-logo">
+					Route
+				</div>
+				<a href="#/docs/routing" class="btn btn-docs">DOCUMENTAÇÃO ROUTE</a>
+			</div>
+			<div class="grid grid-6">
+				<div class="box-content">
+					<p>Rotas</p>
+					<span class="description">
+						Construa rotas de sua API de uma forma <br>
+						diferente e facil.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span>Route::post(</span>
+							<span class="php-string">'login'</span>
+							<span>, [</span>
+							<span class="php-string">'uses'</span>
+							<span> => </span>
+							<span class="php-string">'authController@login'</span>
+							<span>]);</span>
+						</span>
+					</div>
+				</div>
+				<div class="box-content">
+					<p>Agrupar Rotas</p>
+					<span class="description">
+						Agrupe rotas, para facilitar a leitura e<br>
+						criar novas APIs.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span>Route::group(</span>
+							<span class="php-string">'api/v1'</span>
+							<span>, </span>
+							<span class="php-keyword">function</span>
+							<span>(){</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<span class="php-comment">// Rotas</span>
+						</span>
+						<span class="php-line">
+							<span>});</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid grid-12">
+			<div class="grid grid-6" align="center">
+				<div class="img-logo">
+					Controlloer
+				</div>
+				<a href="#/docs/controller" class="btn btn-docs">DOCUMENTAÇÃO CONTROLLER</a>
+			</div>
+			<div class="grid grid-6">
+				<div class="box-content">
+					<p>Controller</p>
+					<span class="description">
+						Faça a magica da sua função acontecer<br>
+						nos seus controles.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span class="php-keyword">use</span>
+							<span>controller\BaseController;</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<span class="php-line">
+							<span class="php-keyword">class</span>
+							<span>MyController</span>
+							<span class="php-keyword">extends</span>
+							<span>BaseController{</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<span class="php-comment">// Functions</span>
+						</span>
+						<span class="php-line">
+							<span>}</span>
+						</span>
+					</div>
+				</div>
+				<div class="box-content">
+					<p>Seeds</p>
+					<span class="description">
+						Construa suas proprias classes para reutilizar em <br>
+						seus controles.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span class="php-keyword">class</span>
+							<span>Seeds {</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<span class="php-comment">// Functions</span>
+						</span>
+						<span class="php-line">
+							<span>}</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="grid grid-12">
+			<div class="grid grid-6" align="center">
+				<div class="img-logo">
+					Model
+				</div>
+				<a href="#/docs/model" class="btn btn-docs">DOCUMENTAÇÃO MODEL</a>
+			</div>
+			<div class="grid grid-6">
+				<div class="box-content">
+					<p>Model</p>
+					<span class="description">
+						Utilize o model para realizar conexões com<br>
+						o banco de dados.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span class="php-keyword">use</span>
+							<span>database\DB;</span>
+						</span>
+						<span class="php-line">
+							<span class="php-keyword">use</span>
+							<span>model\BaseModel;</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						</span>
+						<span class="php-line">
+							<span class="php-keyword">class</span>
+							<span>MyModel</span>
+							<span class="php-keyword">extends</span>
+							<span>BaseModel{</span>
+						</span>
+						<span class="php-line">
+							<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<span class="php-comment">// Functions</span>
+						</span>
+						<span class="php-line">
+							<span>}</span>
+						</span>
+					</div>
+				</div>
+				<div class="box-content">
+					<p>Conexão com Banco de dados</p>
+					<span class="description">
+						Efetue conexões com o banco de dados de<br>
+						forma simplificada.
+					</span>
+					<div class="code">
+						<span class="php-line">
+							<span>DB::select(</span>
+							<span class="php-string">'SELECT * FROM MyTable WHERE Nome = ?'</span>
+							<span>, [</span>
+							<span class="php-string">'Kep'</span>
+							<span>]);</span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

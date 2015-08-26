@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en">
+<head>
+	<meta name="theme-color" content="#333333">
+	<meta charset="UTF-8">
+	<title ng-bind="title">Kep Framework for PHP</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="imagens/favicon-kep.png" />
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="menu">
+				<div class="left">
+					<a href="#/"><img src="imagens/logo-header.png" /></a>
+				</div>
+				<div class="right">
+					<a href="#/docs">Getting started</a>
+					<a href="#/docs">Documentation</a>
+					<a href="https://github.com/matuzalemteles1/Kep" target="_blank">Community</a>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div ng-view></div>
+	
+	<footer>
+		<div class="container">
+			<div class="left">
+				<img src="imagens/logo-footer.png" />
+			</div>
+			<div class="right">
+				<a href="#/about">Sobre</a>
+				<a href="https://github.com/matuzalemteles1/Kep">Github</a>
+				<a href="#" target="_blank">Twitter</a>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+	
+	<script src="app/app/app.js"></script>
+	<script src="app/controllers/controllers.js"></script>
+</body>
+</html>
