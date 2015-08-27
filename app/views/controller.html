@@ -42,7 +42,103 @@
 		<div class="grid grid-8">
 			<div class="docs-content">
 				<h1>Controller</h1>
-				<p>Criação de controles</p>
+				<p>Os controles são utilizados para realizar as suas funções que ira retornar algum objeto, exemplo: queremos fazer a multiplicação de um dado vindo da nossa rota "2" e multiplicar por 2, vejamos isto em um exemplo básico.</p>
+				<h1>Controller Básico</h1>
+				<p>Para criarmos um controller é preciso seguir algumas regras basicas de nossa Framework, confira em <a href="#/docs">Getting started</a>.</p>
+				<p>Vamos criar a nosso primeiro controller e conhecer a estrutura padrão de um Controller Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>controller\BaseController;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>NomeDoController</span>
+						<span class="php-keyword">extends</span>
+						<span>BaseController{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Controller Padrão</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
+				<h1>Meu primeiro controller</h1>
+				<p>Veja um exemplo de nossa Route utilizando a função getMulti() de nosso controller.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>controller\BaseController;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>MyController</span>
+						<span class="php-keyword">extends</span>
+						<span>BaseController{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">public function</span>
+						<span>getMulti(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-variable">$Multiplication</span>
+						<span>=</span>
+						<span class="php-number">2</span>
+						<span>*</span>
+						<span class="php-variable">$this</span>
+						<span>->params()->number</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">echo</span>
+						<span class="php-variable">$this</span>
+						<span>->response(</span>
+						<span class="php-variable">$Multiplication</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>}</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
+				<p>Para que possamos utilizar uma rota que use o nosso controller "MyController" e a função getMulti(), confira.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>Route::post(</span>
+						<span class="php-string">'getMulti'</span>
+						<span>, [</span>
+						<span class="php-string">'uses'</span>
+						<span> => </span>
+						<span class="php-string">'MyController@getMulti'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>Para entender mais sobre Route, leia em <a href="#/docs/routing">Routing</a>.</p>
+				<h1>Controller mais Model</h1>
+				<p>Quando precisamos efetuar alguma conexão com o banco de dados, para obtermos alguns dados. No Kep, utilizamos o Model, para que possamos efetuar está conexão, para saber mais sobre o funcionamento, leia em <a href="#/docs/model">Model</a>.</p>
 			</div>
 		</div>
 	</div>

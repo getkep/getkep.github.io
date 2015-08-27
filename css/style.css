@@ -166,6 +166,10 @@ header .right a:hover{
 	color: #74B0DF;
 }
 
+.php-number{
+	color: #B5CEA8;
+}
+
 .single-text{
 	float: left;
 	width: 100%;
