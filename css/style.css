@@ -238,6 +238,15 @@ header .right a:hover{
 	font-size: 18px;
 }
 
+.jumbotron.donation{
+	height: 227px;
+}
+
+.jumbotron .donation{
+	margin-top: 0;
+	margin-bottom: 4%;
+}
+
 .jumbotron .text h3{
 	font-size: 24px;
 	color: #646464;
@@ -252,6 +261,16 @@ header .right a:hover{
     margin-left: 225px;
     margin-top: 77px;
     padding: 0 90px 0px 0px;
+}
+
+.jumbotron .image-donation{
+	float: left;
+    width: 142px;
+    height: 146px;
+    background: url("../imagens/donation.png") no-repeat;
+    margin-left: 225px;
+    margin-top: 42px;
+    padding: 0 149px 0px 0px;
 }
 
 .btn {
@@ -513,4 +532,145 @@ footer .right a:hover{
 .docs-content a:hover{
 	text-decoration: none;
 	color: #5b4184;
+}
+
+
+
+@media (max-width: 1024px){
+	.container{
+		width: 100%;
+  		margin:0 auto;
+	}
+
+	.container-body{
+		width: 95%;
+	}
+	
+	.browser{
+		margin-left: 23%;
+	}
+	
+	.jumbotron{
+		height: 30%;
+	}
+	
+	.jumbotron .image-coder{
+		margin-left: 17%;
+        margin-top: 10%;
+	}
+	
+	.jumbotron .image-donation{
+		margin-left: 17%;
+    	margin-top: 4%;
+	}
+	
+	.jumbotron .text-donation{
+		margin-bottom: 4%
+	}
+	
+	.menu-vertical-docs:before{
+		margin-left: 239px;
+	}
+	
+	.code{
+		width: 95%;
+	}
+}
+
+@media (max-width: 768px){
+	.browser{
+		margin-left: 14%;
+	}
+	
+	.jumbotron .image-coder{
+		margin-left: 1%;
+   	 	margin-top: 13%;
+    	padding: 0px 4% 0px 0px;
+	}
+	
+	.menu-docs .left{
+		margin-left: 35px;
+	}
+	
+	.menu-docs .right{
+		margin-right: 35px;
+	}
+	
+	.menu-vertical-docs:before {
+    	margin-left: 178px;
+	}
+	
+	.menu-vertical-docs nav {
+    	margin-left: -6px;
+	}
+	
+	.menu-vertical-docs nav ul li{
+		font-size: 18px;
+	}
+	
+	.docs-content{
+		margin-left: 52px;
+	}
+}
+
+@media (max-width: 640px){
+	
+	header .right{
+		display: none;
+	}
+	
+	.browser{
+		margin-left: 6%;
+		margin-top: 7%;
+	}
+	
+	.single-text{
+		height: 96px;
+	}
+	
+	.single-text p{
+		font-size: 32px;
+	}
+	
+	.btn{
+		font-size: 14px;
+	}
+	
+	.btn.btn-docs{
+		padding: 15px 25px 15px 25px;
+	}
+	
+	.menu-vertical-docs:before {
+    	margin-left: 148px;
+	}
+	
+	.menu-vertical-docs nav{
+		margin-left: 0;
+	}
+	
+	.menu-docs .left{
+		margin-left: 15px;
+	}
+	
+	.menu-docs .right{
+		margin-right: 15px;
+	}
+	
+	.menu-docs .left h1{
+		font-size: 30px;
+	}
+	
+	.menu-docs .left span{
+		font-size: 14px;
+	}
+	
+	footer .left{
+		margin-left: 25px;
+		margin-right: 0;
+	}
+	
+	footer .right{
+		margin-right: 25px;
+		margin-left: 0;
+	}
 }
