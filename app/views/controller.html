@@ -68,6 +68,45 @@
 						<span>}</span>
 					</span>
 				</div>
+				<h1>Parameters</h1>
+				<p>Para podermos obter os parâmetros recebidos atraves dos metodos Post, Get, Put e Delete, utilizarmos a função params() de nossa BaseController.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$this</span>
+						<span>->params()->number</span>
+					</span>
+				</div>
+				<h1>Response</h1>
+				<p>Para retornarmos os valores e os resultados que fizemos dentro de nosso controller, utilizamos o método response() da nossa BaseController.</p>
+				<p>Retornamos os valores em formato JSON.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$array</span>
+						<span>=</span>
+						<span class="php-keyword">array</span>
+						<span>(</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">"mensagem"</span>
+						<span>=></span>
+						<span class="php-string">"mensagem a retornar"</span>
+					</span>
+					<span class="php-line">
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">echo</span>
+						<span class="php-variable">$this</span>
+						<span>->response(</span>
+						<span class="php-variable">$array</span>
+						<span>);</span>
+					</span>
+				</div>
+				<p>O <b>Number</b> é o nome do parametro que espera receber e compartilhar pelo controller ou model.</p>
 				<h1>Meu primeiro controller</h1>
 				<p>Veja um exemplo de nossa Route utilizando a função getMulti() de nosso controller.</p>
 				<div class="code docs">
