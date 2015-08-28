@@ -513,6 +513,10 @@ footer .right a:hover{
     margin-left: 98px;
 }
 
+.docs-content.about{
+	margin-left: 0;
+}
+
 .docs-content h1{
 	font-size: 24px;
 	color: #646464;
