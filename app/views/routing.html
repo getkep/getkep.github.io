@@ -44,6 +44,58 @@
 				<h1>Routing</h1>
 				<p>A criação de rotas é o ponto inicial para poder distribuir a sua API para ser consumida.</p>
 				<p>PS: Para começar é preciso que tenha lido o <a href="#/docs">Getting Started</a>.</p>
+				<h1>Routing Básico</h1>
+				<p>Para criarmos a nossa routing, utilizamos o arquivo index.php de acordo às <a href="#/docs">regras</a> da framework.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">require_once</span>
+						<span>(</span>
+						<span class="php-string">"../kep/autoload.php"</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>route\Route;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-comment">/* Criando route com dependência do Controller */</span>
+					</span>
+					<span class="php-line">
+						<span>Route::post(</span>
+						<span class="php-string">"allUsers"</span>
+						<span>, [</span>
+						<span class="php-string">'uses'</span>
+						<span>=> [</span>
+						<span class="php-string">'MyController@allUsers'</span>
+						<span>]);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-comment">/* Criando route sem dependência do Controller */</span>
+					</span>
+					<span class="php-line">
+						<span>Route::post(</span>
+						<span class="php-string">"Endpoint"</span>
+						<span>,</span>
+						<span class="php-keyword">function</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Tarefas para retorna</span>
+					</span>
+					<span class="php-line">
+						<span>)};</span>
+					</span>
+				</div>
 				<h1>Post</h1>
 				<p>O sistema de rotas para obter os dados enviado via Post é bem facil no Kep Framework, vejamos um exemplo deixando a dependencia para o controller.</p>
 				<span class="code docs php-line">
@@ -163,6 +215,41 @@
 					</span>
 					<span class="php-line">
 						<span>)};</span>
+					</span>
+				</div>
+				<h1>Grupos de Route</h1>
+				<p>Com o grupo de routes, podemos determinar uri fixas para o inicio de chamadas às API, assim podemos construir diferentes versões de nossa aplicação no mesmo arquivo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>Route::group(</span>
+						<span class="php-string">'api/v1'</span>
+						<span>, </span>
+						<span class="php-keyword">function</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Rotas</span>
+					</span>
+					<span class="php-line">
+						<span>});</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>Route::group(</span>
+						<span class="php-string">'api/v2'</span>
+						<span>, </span>
+						<span class="php-keyword">function</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Rotas</span>
+					</span>
+					<span class="php-line">
+						<span>});</span>
 					</span>
 				</div>
 				<h1>Response</h1>
