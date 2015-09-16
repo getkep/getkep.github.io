@@ -37,3 +37,7 @@ app.controller('angularjsController', function($scope, $http, $location){
 app.controller('authenticationController', function($scope, $http, $location){
 
 });
+
+app.controller('storeController', function($scope, $http, $location){
+
+});
