@@ -62,18 +62,57 @@
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span class="php-comment">// Controller Padrão</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">private</span>
+						<span class="php-variable">$params</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">function __construct</span>
+						<span>(</span>
+						<span class="php-variable">$parameters</span>
+						<span>){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-variable">$this</span>
+						<span>->params =</span>
+						<span class="php-variable">$parameters</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>}</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 					</span>
 					<span class="php-line">
 						<span>}</span>
 					</span>
 				</div>
 				<h1>Parameters</h1>
-				<p>Para podermos obter os parâmetros recebidos atraves dos metodos Post, Get, Put e Delete, utilizarmos a função params() de nossa BaseController.</p>
+				<p>Para podermos obter os parâmetros recebidos atraves dos metodos Post, Get, Put e Delete, utilizamos o var $params.</p>
+				<p>O retorno dos parâmetros vindo do metodo Post, Put e Delete é JSON, para utilizarmos, vejamos o exemplo:</p>
 				<div class="code docs">
 					<span class="php-line">
 						<span class="php-variable">$this</span>
-						<span>->params()->number</span>
+						<span>->params->number</span>
+					</span>
+				</div>
+				<p>Para o metodo Get, o Kep retorna um array, confira o exemplo:</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$this</span>
+						<span>->params[</span>
+						<span class="php-string">'number'</span>
+						<span>];</span>
 					</span>
 				</div>
 				<h1>Response</h1>
@@ -99,7 +138,6 @@
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 					</span>
 					<span class="php-line">
-						<span class="php-keyword">echo</span>
 						<span class="php-variable">$this</span>
 						<span>->response(</span>
 						<span class="php-variable">$array</span>
@@ -128,6 +166,36 @@
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">private</span>
+						<span class="php-variable">$params</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">function __construct</span>
+						<span>(</span>
+						<span class="php-variable">$parameters</span>
+						<span>){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-variable">$this</span>
+						<span>->params =</span>
+						<span class="php-variable">$parameters</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>}</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span class="php-keyword">public function</span>
 						<span>getMulti(){</span>
 					</span>
@@ -138,7 +206,7 @@
 						<span class="php-number">2</span>
 						<span>*</span>
 						<span class="php-variable">$this</span>
-						<span>->params()->number</span>
+						<span>->params->number</span>
 						<span>;</span>
 					</span>
 					<span class="php-line">
@@ -146,7 +214,6 @@
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span class="php-keyword">echo</span>
 						<span class="php-variable">$this</span>
 						<span>->response(</span>
 						<span class="php-variable">$Multiplication</span>
