@@ -55,6 +55,11 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl : 'app/views/angularjs.html',
       controller  : 'angularjsController',
    })
+   .when('/docs/authentication', {
+      title       : 'Authentication - Kep Framework for PHP',
+      templateUrl : 'app/views/authentication.html',
+      controller  : 'authenticationController',
+   })
  
    // caso não seja nenhum desses, redirecione para a rota '/'
    .otherwise ({ redirectTo: '/' });

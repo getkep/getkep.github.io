@@ -33,3 +33,7 @@ app.controller('seedsController', function($scope, $http, $location){
 app.controller('angularjsController', function($scope, $http, $location){
 
 });
+
+app.controller('authenticationController', function($scope, $http, $location){
+
+});
