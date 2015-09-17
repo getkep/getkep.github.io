@@ -5,7 +5,22 @@
 				<span>Compre lembranças do Kep Framework</span>
 			</div>
 			<div class="right">
-				<a class="btn btn-store car"><img src="imagens/buy.png" alt="Carrinho"> R$ {{value}}</a>
+				<nav class="primary_nav_wrap">
+					<ul>
+						<li><a class="btn btn-store car"><img src="imagens/buy.png" alt="Carrinho"> R$ {{value}}</a>
+							<ul>
+								
+								<li ng-repeat="product in jsonCheckout[0].products" ng-if="product.quantity > 0">
+									<span class="delete" ng-click="delete(product.refcode)">x</span>
+									<label>{{product.name}}</label>
+									<span>{{product.quantity}}x R$6,00</span>
+								</li>
+								
+                	     		
+               				</ul>
+						</li>
+					</ul>
+				</nav>
 				<a ng-click="checkout()" class="btn btn-store buy">Comprar</a>
 			</div>
 		</div>
@@ -14,7 +29,12 @@
 		<div class="grid grid-12">
 			<div class="docs-content ">
 				
-				<div ng-if="isMsg == true" class="box-message">{{Msg}}</div>
+				<div ng-if="isMsg == true" class="box-message alert">
+					{{Msg}}
+					<div class="right">
+						<a href="#/store" ng-click="close()">x</a>
+					</div>
+				</div>
 				
 				<h1>Stickers</h1>
 				
@@ -23,7 +43,7 @@
 						<div class="store-img"><img src="imagens/sticker-logo.png" alt="Sticker logo"></div>
 						<div class="store-data">
 							Kep (Logo) Sticker
-							<span>R$5,99</span>
+							<span>R$6,00</span>
 						</div>
 					</div>
 					<div class="store-btn">
@@ -36,7 +56,7 @@
 						<div class="store-img"><img src="imagens/sticker-horizontal-2.png" alt="Sticker logo"></div>
 						<div class="store-data">
 							Kep (horizontal) Sticker
-							<span>R$5,99</span>
+							<span>R$6,00</span>
 						</div>
 					</div>
 					<div class="store-btn">
@@ -49,7 +69,7 @@
 						<div class="store-img"><img src="imagens/sticker-horizontal.png" alt="Sticker logo"></div>
 						<div class="store-data">
 							Kep (horizontal) Sticker
-							<span>R$5,99</span>
+							<span>R$6,00</span>
 						</div>
 					</div>
 					<div class="store-btn">

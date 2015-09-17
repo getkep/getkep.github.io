@@ -43,9 +43,21 @@ app.controller('storeController', function($scope, $http, $location){
 		{
 			value: 0,
 			products: {
-				stk001: 0,
-				stk002: 0,
-				stk003: 0,
+				stk001: {
+					name: "Kep (Logo) Sticker",
+					refcode: "stk001",
+					quantity: 0,
+				},
+				stk002: {
+					name: "Kep (horizontal) Sticker",
+					refcode: "stk002",
+					quantity: 0,	
+				},
+				stk003: {
+					name: "Kep (horizontal 2) Sticker",	
+					refcode: "stk003",
+					quantity: 0,
+				},
 			}
 		}
 	];
@@ -55,18 +67,33 @@ app.controller('storeController', function($scope, $http, $location){
 	$scope.isMsg = false;
 	$scope.Msg = null;
 	
+	$scope.close = function(){
+		$scope.isMsg = false;
+	}
+	
 	$scope.buy = function (params) {
-		$scope.value = $scope.value + 5.99;
+		$scope.value = $scope.value + 6;
 		
-		$scope.jsonCheckout.value = $scope.value;
-		$scope.jsonCheckout[0].products[params] = $scope.jsonCheckout[0].products[params] + 1;
+		$scope.jsonCheckout[0].value = $scope.value;
+		$scope.jsonCheckout[0].products[params].quantity = $scope.jsonCheckout[0].products[params].quantity + 1;
 		console.log($scope.jsonCheckout);
+	}
+	
+	$scope.delete = function(params){
+		$scope.value = $scope.value - 6;
+		
+		$scope.jsonCheckout[0].value = $scope.value;
+		$scope.jsonCheckout[0].products[params].quantity = $scope.jsonCheckout[0].products[params].quantity - 1;
+		
 	}
 	
 	$scope.checkout = function(){
 		if($scope.value == 0.00){
 			$scope.isMsg = true;
 			$scope.Msg = "O carrinho está vazio :/";
+		}else if($scope.value >= 100){
+			$scope.isMsg = true;
+			$scope.Msg = "Uhouuu emprisionante a quantidade de stickers que você deseja, agora teremos café por um bom tempo ;). mais a loja não está pronta ainda :/"
 		}else{
 			$scope.isMsg = true;
 			$scope.Msg = "Ficamos felizes pelo o seu interesse, mais a loja não está pronta ainda :/"
