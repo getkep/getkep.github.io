@@ -43,7 +43,160 @@
 		<div class="grid grid-8">
 			<div class="docs-content">
 				<h1>Query Builder</h1>
-				<p>Conexão com banco de dados no model</p>
+				<p>Para utilizarmos o model para conexões com o banco de dados, precisamos utilizar o Query Builder do Kep.</p>
+				<h1>Conexão</h1>
+				<p>Antes de comerçamos é preciso configurar o arquivo config.php, siga o <a href="#/docs">Getting Started</a>.</p>
+				<h1>Select</h1>
+				<p>Para efetuarmos uma seleção em nosso banco de dados é bem simples, veja um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$select</span>
+						<span>= DB::select(</span>
+						<span class="php-string">'SELECT * FROM Users'</span>
+						<span>);</span>
+					</span>
+				</div>
+				<p>Para o uso do WHERE, existe algumas regras, para adicionar um valor coresponde a coluna, precisamos adicionar em uma matriz em ordem, veja um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$select</span>
+						<span>= DB::select(</span>
+						<span class="php-string">'SELECT * FROM Users WHERE Nome = ?'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>Podemos percebe que utilizamos a "interrogação" na frente do "Nome =", isto significa que estamos falando para o Kep preencher o espaço de acordo a ordem que passamos na matriz.</p>
+				<p>O nossa query retorna uma array com os valores, confira.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$select</span>
+						<span>[</span>
+						<span class="php-string">'num_rows'</span>
+						<span>];</span>
+					</span>
+					<span class="php-line">
+						<span class="php-variable">$select</span>
+						<span>[</span>
+						<span class="php-string">'fetch_array'</span>
+						<span>];</span>
+					</span>
+				</div>
+				<p>Para podermos guarda ou utilizar os dados do fetch_array, utilizamos o foreach, vejamos um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">foreach</span>
+						<span>(</span>
+						<span class="php-variable">$select</span>
+						<span>[</span>
+						<span class="php-string">'fetch_array'</span>
+						<span>]</span>
+						<span class="php-keyword">as</span>
+						<span class="php-variable">$fetch</span>
+						<span>){</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
+				<h1>Update</h1>
+				<p>Para podermos efetuar um update em nosso banco de dados, utilizamos uma pequena regra do Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$update</span>
+						<span>= DB::update(</span>
+						<span class="php-string">'UPDATE Users SET Nome = ?, Tag = ?'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>, </span>
+						<span class="php-string">'PHP'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>Para utilizar o WHERE em nosso query, utilizamos a mesma forma acima, confira.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$update</span>
+						<span>= DB::update(</span>
+						<span class="php-string">'UPDATE Users SET Nome = ?, Tag = ? WHERE Nome = ?'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>, </span>
+						<span class="php-string">'PHP'</span>
+						<span>, </span>
+						<span class="php-string">'Fulano'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>O query builder do Kep, sempre retorna alguns dados do resultado da query em uma array, confira um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$update</span>
+						<span>[</span>
+						<span class="php-string">'affected'</span>
+						<span>];</span>
+					</span>
+				</div>
+				<h1>Insert</h1>
+				<p>Para inserirmos uma query em nosso banco de dados, utilizamos uma regra do Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$insert</span>
+						<span>= DB::insert(</span>
+						<span class="php-string">'INSERT INTO Users(Nome, Tag) VALUES(?, ?)'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>, </span>
+						<span class="php-string">'PHP'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>O query builder do Kep, sempre retorna alguns dados do resultado da query em uma array, confira um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$insert</span>
+						<span>[</span>
+						<span class="php-string">'affected'</span>
+						<span>];</span>
+					</span>
+					<span class="php-line">
+						<span class="php-variable">$insert</span>
+						<span>[</span>
+						<span class="php-string">'insert_id'</span>
+						<span>];</span>
+					</span>
+				</div>
+				<h1>Delete</h1>
+				<p>Para deletarmos uma coluna de nosso banco de dados, utilizamos uma regra do Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$delete</span>
+						<span>= DB::delete(</span>
+						<span class="php-string">'DELETE * FROM Users'</span>
+						<span>);</span>
+					</span>
+				</div>
+				<p>Para deletar uma coluna especifica, utilizamos o WHERE, confira a nossa query no Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$delete</span>
+						<span>= DB::delete(</span>
+						<span class="php-string">'DELETE * FROM Users WHERE Nome = ?'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>]);</span>
+					</span>
+				</div>
+				<p>O query builder do Kep, sempre retorna alguns dados do resultado da query em uma array, confira um exemplo.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$delete</span>
+						<span>[</span>
+						<span class="php-string">'affected'</span>
+						<span>];</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
