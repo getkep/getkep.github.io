@@ -100,3 +100,7 @@ app.controller('storeController', function($scope, $http, $location){
 		}
 	}
 });
+
+app.controller('blogController', function($scope, $http, $location){
+
+});
