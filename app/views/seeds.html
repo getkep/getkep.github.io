@@ -43,7 +43,84 @@
 		<div class="grid grid-8">
 			<div class="docs-content">
 				<h1>Seeds</h1>
-				<p>Criação de functions reutilizaveis e saudaveis</p>
+				<p>Os seeds são utilizados para adicionar complementos ou snippets em sua aplicação, podendo está utilizando a nossa função em todos os nossos controllers, deixando as nossas funções reutilizáveis e saudáveis.</p>
+				<h1>Configuração</h1>
+				<p>Para adicionar os nossos seeds em nossa aplicação, bastamos acessar a nossa página Seeds e criar o arquivo com o nome do nosso seed, siga as regras em nosso <a href="#/docs">Getting Started</a>.</p>
+				<h1>Seed básica</h1>
+				<p>O nome da classe de nossa seed, tem que ser iguais ao nome do arquivo sem a extensão '.php'.</p>
+				<p>vejamos o exemplo de nossa primeira seed. Seeds.php</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>Seeds{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Functions</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
+				<h1>Seed no controller</h1>
+				<p>Para podermos utilizar a nossa seed em nosso controller, precisamos fazer o load, confira como se faz no Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>controller\BaseController;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>NomeDoController</span>
+						<span class="php-keyword">extends</span>
+						<span>BaseController{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">private</span>
+						<span class="php-variable">$seed</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">function __construct</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-variable">$this</span>
+						<span>->seed =</span>
+						<span class="php-variable">$this</span>
+						<span>->seeds(</span>
+						<span class="php-string">'seeds'</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>}</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
