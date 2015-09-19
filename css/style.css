@@ -57,6 +57,12 @@ header .right a:hover{
 	color: #ebebeb;
 }
 
+header .right a.active {
+    background-color: #3e2c5a;
+    padding-top: 40px;
+    padding-bottom: 36px;
+}
+
 .browser {
 	float: left;
 	margin-left: 28.08%; /* 351px */

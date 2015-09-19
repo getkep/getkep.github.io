@@ -15,10 +15,10 @@
 					<a href="#/"><img src="imagens/logo-header.png" /></a>
 				</div>
 				<div class="right">
-					<a href="#/docs">Getting started</a>
-					<a href="#/docs">Documentation</a>
-					<a href="#/store">Store</a>
-					<a href="#/blog">Blog</a>
+					<a ng-class="{ active: category == 'started'}" href="#/docs">Getting started</a>
+					<a ng-class="{ active: category == 'docs'}" href="#/docs/routing">Documentation</a>
+					<a ng-class="{ active: category == 'store'}" href="#/store">Store</a>
+					<a ng-class="{ active: category == 'blog'}" href="#/blog">Blog</a>
 				</div>
 			</div>
 		</div>
