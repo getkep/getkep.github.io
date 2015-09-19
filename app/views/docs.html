@@ -64,6 +64,10 @@
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>├─ authentication/</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span>├─ config/</span>
 					</span>
 					<span class="php-line">
@@ -102,8 +106,7 @@
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span class="php-string">'connections'</span>
 						<span>=></span>
-						<span class="php-string">'mysqli'</span>
-						<span>,</span>
+						<span>[</span>
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -154,6 +157,46 @@
 						<span>],</span>
 					</span>
 					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'authentication'</span>
+						<span>=></span>
+						<span>[</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'mysql'</span>
+						<span>=> [</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'activate'</span>
+						<span>=></span>
+						<span class="php-keyword">true</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'table'</span>
+						<span>=></span>
+						<span class="php-string">'Tabela'</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'column'</span>
+						<span>=></span>
+						<span class="php-string">'Coluna'</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>],</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>],</span>
+					</span>
+					<span class="php-line">
 						<span>];</span>
 					</span>
 				</div>
@@ -168,6 +211,11 @@
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span>├─ kep/</span>
+					</span>
+					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  						<span>│</span>
+						<span>&nbsp;&nbsp;</span>
+						<span>├─ authentication/</span>
 					</span>
 					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
   						<span>│</span>
