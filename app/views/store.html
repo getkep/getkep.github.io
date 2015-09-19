@@ -9,14 +9,11 @@
 					<ul>
 						<li><a class="btn btn-store car"><img src="imagens/buy.png" alt="Carrinho"> R$ {{value}}</a>
 							<ul>
-								
 								<li ng-repeat="product in jsonCheckout[0].products" ng-if="product.quantity > 0">
 									<span class="delete" ng-click="delete(product.refcode)">x</span>
 									<label>{{product.name}}</label>
 									<span>{{product.quantity}}x R$6,00</span>
 								</li>
-								
-                	     		
                				</ul>
 						</li>
 					</ul>
