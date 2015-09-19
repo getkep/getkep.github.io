@@ -44,6 +44,95 @@
 			<div class="docs-content">
 				<h1>Model</h1>
 				<p>Para a criação de Models é preciso seguir algumas regras de nossa Framework, leia mais em <a href="#/docs">Getting started</a></p>
+				<h1>O que são?</h1>
+				<p>O Model é utilizado em junção com o <a href="#/docs/controller">Controller</a>, é capaz de efetuar conexões com o banco de dados.</p>
+				<h1>Model Básica</h1>
+				<p>Vamos criar um model básica para servir o controller, iremos conhecer a estrutura do model do Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>database\DB;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>model\BaseModel;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>mymodel</span>
+						<span class="php-keyword">extends</span>
+						<span>BaseModel{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-comment">// Functions</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
+				<h1>Dependência do controller</h1>
+				<p>Para poder utilizar o model e a suas funções é preciso utilizar a depedencia do controller, vejamos como poderemos chamar o nosso model no controller.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>controller\BaseController;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">class</span>
+						<span>MyController</span>
+						<span class="php-keyword">extends</span>
+						<span>BaseController{</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">private</span>
+						<span class="php-variable">$load</span>
+						<span>;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-keyword">function __construct</span>
+						<span>(){</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-variable">$this</span>
+						<span>->load =</span>
+						<span class="php-variable">$this</span>
+						<span>->LoadModel(</span>
+						<span class="php-string">'mymodel'</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>}</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>}</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
