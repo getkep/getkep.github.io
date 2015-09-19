@@ -139,7 +139,9 @@
 				<p>Para obter o valor da Get dentro do controller eu poderia obter desta maneira.</p>
 				<span class="code docs php-line">
 					<span class="php-variable">$this</span>
-					<span>->params()->id;</span>
+					<span>->params[</span>
+					<span class="php-string">'id'</span>
+					<span>];</span>
 				</span>
 				<p>O valor <b>id</b> é coresponde ao declarado no route.</p>
 				<p>Para podermos utilizar o parametro recebido atraves da get sem a dependencia do controller.</p>
@@ -149,19 +151,24 @@
 						<span class="php-string">"salvar/:id"</span>
 						<span>,</span>
 						<span class="php-keyword">function</span>
-						<span>($id){</span>
+						<span>(</span>
+						<span class="php-variable">$parameters</span>
+						<span>){</span>
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span class="php-keyword">echo</span>
-						<span class="php-variable">$id</span>
+						<span class="php-variable">$parameters</span>
+						<span>[</span>
+						<span class="php-string">'id'</span>
+						<span>]</span>
 						<span>;</span>
 					</span>
 					<span class="php-line">
 						<span>)};</span>
 					</span>
 				</div>
-				<p>Como podemos observar o Kep é inteligente o possivel para interpretar o parametro e retornar para a function o parametro com o mesmo nome. ;)</p>	
+				<p>O Kep ele retorna uma matriz com os paramêtros contidos na variavel $parameters para metodos Get.</p>	
 				<h1>Put</h1>
 				<p>Metodo put, normalmente utilizado para API de atualização de dados, confira o modo de uso com a dependencia do controller.</p>
 				<span class="code docs php-line">
@@ -276,7 +283,6 @@
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
 					</span>
 					<span class="php-line">
-						<span class="php-keyword">echo</span>
 						<span class="php-variable">$this</span>
 						<span>->response(</span>
 						<span class="php-variable">$array</span>
