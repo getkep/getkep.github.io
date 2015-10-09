@@ -38,6 +38,10 @@ app.controller('authenticationController', function($scope, $http, $location){
 
 });
 
+app.controller('headersController', function($scope, $http, $location){
+
+});
+
 app.controller('storeController', function($scope, $http, $location){
 	$scope.jsonCheckout = [
 		{

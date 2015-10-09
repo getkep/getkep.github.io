@@ -1,0 +1,130 @@
+	<div class="menu-docs">
+		<div class="container">
+			<div class="left">
+				<h1>Documentação</h1>
+				<span>Aprenda como utilizar o Kep Framework</span>
+			</div>
+			<div class="right">
+				<a href="https://github.com/KepPHP/Kep/archive/master.zip" class="btn btn-download"><span>ALPHA</span>DOWNLOAD V0.1</a>
+			</div>
+		</div>
+	</div>
+	<div class="container container-body">
+		<div class="grid grid-3 menu-vertical-docs">
+			<nav>
+				<ul>
+					<li class="idx"><a href="#/docs">Getting started</a></li>
+					<li>Básico
+						<ul>
+							<li><a href="#/docs/routing">Routing</a></li>
+							<li><a href="#/docs/controller">Controller</a></li>
+							<li><a href="#/docs/model">Model</a></li>
+						</ul>
+					</li>
+					<li>Database
+						<ul>
+							<li><a href="#/docs/query-builder">Query Builder</a></li>
+						</ul>
+					</li>
+					<li>Security
+						<ul>
+							<li class="active"><a href="#/docs/headers">Headers</a></li>
+						</ul>
+					</li>
+					<li>Serviços
+						<ul>
+							<li><a href="#/docs/seeds">Seeds</a></li>
+							<li><a href="#/docs/authentication">Authentication</a></li>
+						</ul>
+					</li>
+					<li>Views
+						<ul>
+							<li><a href="#/docs/angularjs">AngularJS</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="grid grid-8">
+			<div class="docs-content">
+				<h1>Headers</h1>
+				<p>Para podemos melhorar a segurança de nossas APIs, utilizamos as Headers ao nosso favor. O Kep tem pequenas configurações da Header, não ínsita em contribuir para podermos melhorar.</p>
+				<h1>Access control allow origin</h1>
+				<p>Com isto podemos definir, qual domínio ou ip pode acessar a nossa API ou liberar com uso do "*".</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">require_once</span>
+						<span>(</span>
+						<span class="php-string">"../kep/autoload.php"</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>route\Route;</span>
+					</span>
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>headers\header;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>header::allowOrigin(</span>
+						<span class="php-string">"http://kepphp.github.io"</span>
+						<span>);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>Route::post(</span>
+						<span class="php-string">"allUsers"</span>
+						<span>, [</span>
+						<span class="php-string">'uses'</span>
+						<span>=> [</span>
+						<span class="php-string">'MyController@allUsers'</span>
+						<span>]);</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+				</div>
+				<h1>Access control allow headers</h1>
+				<p>Podemos adicionar mais informações a nossa header.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>headers\header;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>header::contentType(</span>
+						<span class="php-string">"Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"</span>
+						<span>);</span>
+					</span>
+				</div>
+				<h1>Content type</h1>
+				<p>Podemos definir os dados que a API, pode receber, confira em ação.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">use</span>
+						<span>headers\header;</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					</span>
+					<span class="php-line">
+						<span>header::contentType(</span>
+						<span class="php-string">"application/x-www-form-urlencoded, multipart/form-data, text/plain"</span>
+						<span>);</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>

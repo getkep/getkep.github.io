@@ -1,15 +1,9 @@
-var app = angular.module('app',['ngRoute']);
+var app = angular.module('kep',['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider){   
-   // remove o # da url
-   //$locationProvider.html5Mode({
-   //    enabled: true,
-   //    requireBase: false
-   //});
-
+   
    $routeProvider
  
-   // para a rota '/', carregaremos o template home.html e o controller 'HomeCtrl'
    .when('/', {
       category    : 'home',
       title       : 'Kep Framework for PHP',
@@ -82,8 +76,12 @@ app.config(function($routeProvider, $locationProvider){
       templateUrl : 'app/views/authentication.html',
       controller  : 'authenticationController',
    })
- 
-   // caso não seja nenhum desses, redirecione para a rota '/'
+   .when('/docs/headers', {
+      category    : 'headers',
+      title       : 'Headers - Kep Framework for PHP',
+      templateUrl : 'app/views/headers.html',
+      controller  : 'headersController',
+   })
    .otherwise ({ redirectTo: '/' });
 });
 
