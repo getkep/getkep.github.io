@@ -95,7 +95,7 @@
 						<span>└─ kep.php</span>
 					</span>
 				</div>
-				<p>Acesse a pasta do kep e config, abra o arquivo database.php para configuração de acesso ao
+				<p>Acesse a pasta do kep e config, abra o arquivo config.php para configuração de acesso ao
 				banco de dados.</p>
 				<div class="code docs">
 					<span class="php-line">
@@ -202,7 +202,7 @@
 				</div>
 				<h1>Iniciando API</h1>
 				<p>Para o funcionamento correto da aplicação é preciso criar uma pasta chamada de “v1”  e criar
-				as pasta subsequentes para o uso do controller e model., nossa estrutura de nossa aplicação
+				as pasta subsequentes para o uso do controller e model. nossa estrutura de nossa aplicação
 				fica assim.</p>
 				<div class="code docs">
 					<span class="php-line">
@@ -275,6 +275,22 @@
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 						<span>└─ index.php</span>
+					</span>
+				</div>
+				<h1>.htaccess</h1>
+				<p>Para o funcionamento correto da API, precisamos criar urls amigaveis e deixar o Kep cuidar do assunto.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>RewriteEngine On</span>
+					</span>
+					<span class="php-line">
+						<span>RewriteCond %{REQUEST_FILENAME} !-f</span>
+					</span>
+					<span class="php-line">
+						<span>RewriteCond %{REQUEST_FILENAME} !-d</span>
+					</span>
+					<span class="php-line">
+						<span>RewriteRule . index.php [L]</span>
 					</span>
 				</div>
 				<h1>Routes</h1>
