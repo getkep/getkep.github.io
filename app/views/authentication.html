@@ -48,7 +48,67 @@
 		<div class="grid grid-8">
 			<div class="docs-content">
 				<h1>Authentication</h1>
-				<p>Autenticação da conta do usuário.</p>
+				<p>Usamos uma camada de autenticação do usuário, onde o mesmo que consome os dados da API, envie o nome de usuário e uma token, onde o mesmo e comparado com a $_SESSION["token"] e no banco de dados.</p>
+				<h1>User/Email</h1>
+				<p>A arquitetura que consome a API, envia o nome de usuário ou email para comparar no sistema.</p>
+				<h1>Token</h1>
+				<p>A token, pode ser numeros e letras aleatorios, gerados pelo seu sistema e adicionado a uma sessão. Token gerada a cada novo login do usuário em seu sistema.</p>
+				<h1>Configuração</h1>
+				<p>Para configurar o sistema de autenticação é preciso altear no arquivo do Kep.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>kep/config/config.php</span>
+					</span>
+				</div>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-keyword">return</span>
+						<span>[</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'authentication'</span>
+						<span>=></span>
+						<span>[</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'mysql'</span>
+						<span>=> [</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'activate'</span>
+						<span>=></span>
+						<span class="php-keyword">true</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'table'</span>
+						<span>=></span>
+						<span class="php-string">'Tabela'</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span class="php-string">'column'</span>
+						<span>=></span>
+						<span class="php-string">'Coluna'</span>
+						<span>,</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>],</span>
+					</span>
+					<span class="php-line">
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>],</span>
+					</span>
+					<span class="php-line">
+						<span>];</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
