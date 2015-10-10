@@ -202,6 +202,20 @@
 						<span>];</span>
 					</span>
 				</div>
+				<h1>Delimitando</h1>
+				<p>Para utilizar comandos no fim de uma query, como 'LIMIT' e 'ORDER BY'. No Kep, fazemos da seguinte forma.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span class="php-variable">$select</span>
+						<span>= DB::select(</span>
+						<span class="php-string">'SELECT * FROM Users WHERE Nome = ?'</span>
+						<span>, [</span>
+						<span class="php-string">'Matuzalem'</span>
+						<span>], [</span>
+						<span class="php-string">'ORDER BY id DESC LIMIT 1'</span>
+						<span>]);</span>
+					</span>
+				</div>
 			</div>
 		</div>
 	</div>
