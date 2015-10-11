@@ -296,8 +296,13 @@
 					<span>Ajude a mantermos o projeto, fazendo uma <br>
 					doação de qualquer valor.</span>
 					<br /><br />
-					<a href="#" class="btn btn-docs">DOAR (PAYPAL)</a>
-					<a href="#/store" class="btn btn-docs">COMPRE E AJUDE</a>
+					<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+						<input type="hidden" name="cmd" value="_s-xclick">
+						<input type="hidden" name="hosted_button_id" value="8T8FEBXNWYX5L">
+						<input type="submit" name="submit" class="btn btn-doar" value="DOAR (PAYPAL)">
+						<img alt="" border="0" src="https://www.paypalobjects.com/pt_BR/i/scr/pixel.gif" width="1" height="1">
+						<a href="#/store" class="btn btn-docs">COMPRE E AJUDE</a>
+					</form>
 				</div>
 			</div>
 		</div>

@@ -311,6 +311,19 @@ header .right a.active {
     color: #fff;
 }
 
+.btn.btn-doar {
+    cursor: pointer;
+    text-align: center;
+    padding: 18px 52px 20px 60px;
+    border: 0;
+    background-color: #563d7c;
+    color: #fff;
+}
+
+.btn.btn-doar:hover{
+	background-color: #5b4184;
+}
+
 .btn.btn-docs:hover{
 	background-color: #5b4184;
 }
