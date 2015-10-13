@@ -566,6 +566,12 @@ footer .right a:hover{
 	font-weight: bold;
 }
 
+.docs-content h2{
+	font-size: 20px;
+	color: #777777;
+	font-weight: bold;
+}
+
 .docs-content p{
 	font-size: 18px;
 	color: #6e6e6e;
