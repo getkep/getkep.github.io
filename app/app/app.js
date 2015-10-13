@@ -1,4 +1,4 @@
-var app = angular.module('kep',['ngRoute']);
+var app = angular.module('kep',['ngRoute', 'chart.js']);
 
 app.config(function($routeProvider, $locationProvider){   
    
@@ -81,6 +81,12 @@ app.config(function($routeProvider, $locationProvider){
       title       : 'Headers - Kep Framework for PHP',
       templateUrl : 'app/views/headers.html',
       controller  : 'headersController',
+   })
+   .when('/get-involved', {
+      category    : 'get-involved',
+      title       : 'Envolva-se - Kep Framework for PHP',
+      templateUrl : 'app/views/get-involved.html',
+      controller  : 'involvedController',
    })
    .otherwise ({ redirectTo: '/' });
 });

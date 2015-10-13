@@ -108,3 +108,48 @@ app.controller('storeController', function($scope, $http, $location){
 app.controller('blogController', function($scope, $http, $location){
 
 });
+
+app.controller('involvedController', function($scope, $http, $location){
+	$scope.BarLabels = ["01"];
+    $scope.BarData = [
+		[1],
+		[1],
+		[6]
+	];
+	$scope.Barcolours = [
+      {
+        fillColor: '#3e2c5a',
+        strokeColor: '#3e2c5a',
+      },
+      {
+        fillColor: '#422f60',
+        strokeColor: '#422f60',
+      },
+	  {
+        fillColor: '#4a356b',
+        strokeColor: '#4a356b',
+      }
+    ];
+	$scope.Docolours = ['#2d2042', '#4f3b6f'];
+	
+	$scope.labels = ["Incomplet", "Complete"];
+	$scope.data = [0, 6];
+	$scope.data2 = [0, 6];
+	$scope.data3 = [6, 0];
+	
+	$scope.options = {
+		segmentShowStroke : false,
+		animateRotate : true,
+		animationEasing: "easeInOutQuad",
+		animationSteps : 40,
+		showTooltips : false,
+		percentageInnerCutout: 85
+	};
+	$scope.Baroptions = {
+		responsive : false,
+		barValueSpacing:  3,
+        scaleShowLabels: false,
+        showScale: false,
+        showTooltips: false
+	};
+});

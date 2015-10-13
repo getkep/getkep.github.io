@@ -1,0 +1,124 @@
+<div class="index">
+	<div class="container">
+		<div class="charts">
+    	    <div class="barchart-ctn">
+				<canvas class="chart chart-base" chart-type="'StackedBar'" width="600" height="315" style="width: 600px; height: 315px;"
+  					chart-data="BarData" chart-labels="BarLabels" chart-options="Baroptions" chart-colours="Barcolours">
+				</canvas>
+    	    </div>
+    	    <div class="doughnuts-ctn">
+    	        <div class="doughnut fixed">
+					<canvas id="doughnut" class="chart chart-doughnut" width="90" height="90" style="width: 90px; height: 90px;"
+  						chart-data="data" chart-labels="labels" chart-options="options" chart-colours="Docolours">
+					</canvas>
+    	            <div class="doughnut-label">
+    	                <span class="doughnut-count">0</span><br>
+    	                Corrigido
+    	            </div>
+    	        </div>
+    	        <div class="doughnut in-progress">
+    	            <canvas id="doughnut" class="chart chart-doughnut" width="90" height="90" style="width: 90px; height: 90px;"
+  						chart-data="data2" chart-labels="labels" chart-options="options" chart-colours="Docolours">
+					</canvas>
+    	            <div class="doughnut-label">
+    	                <span class="doughnut-count">0</span><br>
+    	                Em Progresso
+    	            </div>
+    	        </div>
+    	        <div class="doughnut created">
+    	            <canvas id="doughnut" class="chart chart-doughnut" width="90" height="90" style="width: 90px; height: 90px;"
+  						chart-data="data3" chart-labels="labels" chart-options="options" chart-colours="Docolours">
+					</canvas>
+    	            <div class="doughnut-label">
+    	                <span class="doughnut-count">6</span><br>
+    	                Não Corrigido
+    	            </div>
+    	        </div>
+    	    </div>
+    	</div>
+	</div>
+</div>
+<div class="single-text">
+	<p>ENVOLVA-SE COM O PROJETO</p>
+</div>
+<div class="container container-body">
+		<div class="grid grid-3 menu-vertical-docs">
+			<nav>
+				<ul>
+					<li class="idx"><a href="#/get-involved#get-involved">Envolva-se?</a></li>
+					<li>Traduções
+						<ul>
+							<li><a href="#/get-involved#english">English</a></li>
+							<li><a href="#/get-involved#portuguese">Português</a></li>
+							<li><a href="#/get-involved#others">Outros</a></li>
+						</ul>
+					</li>
+					<li>Desenvolvimento web
+						<ul>
+							<li><a href="#/get-involved#docs">Documentação</a></li>
+						</ul>
+						<ul>
+							<li><a href="#/get-involved#css">CSS</a></li>
+						</ul>
+						<ul>
+							<li><a href="#/get-involved#html">HTML</a></li>
+						</ul>
+					</li>
+					<li>Projeto
+						<ul>
+							<li><a href="#/get-involved#corrections">Correção</a></li>
+						</ul>
+						<ul>
+							<li><a href="#/get-involved#improvements">Melhorias</a></li>
+						</ul>
+						<ul>
+							<li><a href="#/get-involved#newfunctions">Novas funções</a></li>
+						</ul>
+					</li>
+					<li class="idx"><a href="#/about">Contribuintes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="grid grid-8">
+			<div class="docs-content">
+				<h1 id="get-involved">Envolva-se?</h1>
+				<p>Você pode está se perguntando o que é o Envolva-se, correto? está é uma maneira de convocarmos os desenvolvedores a começarem a participar do projeto e saberem o que eles podem fazer.</p>
+				<h2>Gráfico</h2>
+				<p>Para um melhor entendimento do gráfico acima, iremos explicar com detalhes. O gráfico é composto por 3 métricas, Corrigido, Em progresso e Não corrigido. Mesmo sendo nomes óbvios de identificarem, eles também são compostos por novas funções, confira abaixo o que cada métrica pode agrupar.</p>
+				<p>- <b>Corrigido</b>: Agrupa correções da framework, melhorias na construção e novas funcionalidades.</p>
+				<p>- <b>Em proguesso</b>: Agrupa todas as informações sitadas em "Corrigido", que estão entrando em fase de desenvolvimento ou acabamento.</p>
+				<p>- <b>Não corrigido</b>: Agrupa todas as informações sitadas acima, os números são baseados de acordo os issues no repositório no <a href="https://github.com/KepPHP/Kep/issues">Github</a>.</p>
+				<p>Temos dois gráficos compostos na header (Chart StackedBar e Chart Doughnut), os números são atualizados a cada 15 dias e zerado a cada atualização quando a versão for maior(MAJOR).</p>
+				<h2>Versioning</h2>
+				<p>O Kep é mantido sob <a href="http://semver.org/">as orientações Semantic Versioning</a>.</p>
+				<h2>Proposito</h2>
+				<p>Queremos trabalhar em um projeto totalmente estável, pensando em facilidade, produtividade e performance para os iniciantes.</p>
+				<h1>Traduções</h1>
+				<p>Ajude a traduzir nossas documentações, para que possamos compartilhar com o mundo. o seu nome estará na lista de contribuintes.</p>
+				<h2 id="english">English</h2>
+				<p>Colabore na tradução de nosso website para o <b>English</b>.</p>
+				<p> - <b>0/100%</b></p>
+				<h2 id="portuguese">Português</h2>
+				<p>Colabore em melhorar a formo como explicamos e correções ortográficas.</p>
+				<p> - <b>100/100%</b></p>
+				<h2 id="others">Outros</h2>
+				<p>Compartilhe com nos, mostre outra idioma que você posso contribuir. abra um <a href="https://github.com/KepPHP/Kep/issues">issues</a>.</p>
+				<h1>Desenvolvimento web</h1>
+				<p>Ajude a melhorar a performance de nosso website, ajuda em UX e UI é bem vinda.  o seu nome estará na lista de contribuintes.</p>
+				<h2 id="docs">Documentação</h2>
+				<p>Nos ajude a melhorar a nossa documentação, esclarecendo com mais detalhes para os iniciantes.</p>
+				<h2 id="css">CSS</h2>
+				<p>Ajude melhorando a forma como escrevemos o CSS de nosso website.</p>
+				<h2 id="html">HTML</h2>
+				<p>Ajude a melhorar a forma como escrevemos o HTML de nosso website.</p>
+				<h1>Projeto</h1>
+				<p>A nossa framework é escrita em PHP e precisamos de sua ajuda para continuarmos melhorando e corrigindo, como boas praticas e uso de patterns.  o seu nome estará na lista de contribuintes.</p>
+				<h2 id="corrections">Correção</h2>
+				<p>Vamos à caça, confira os nossos <a href="https://github.com/KepPHP/Kep/issues">issues</a> e tente corrigir, não tem? realize testes com o projeto. se achar algum basta reportar.</p>
+				<h2 id="improvements">Melhorias</h2>
+				<p>Ajude a melhorar a nossa framework, utilizando bons modos de escrita e performance.</p>
+				<h2 id="newfunctions">Novas funções</h2>
+				<p>Penso em algo que possa mudar a forma como vemos o Kep? ou um nova função, contribua.</p>
+			</div>
+		</div>
+	</div>
