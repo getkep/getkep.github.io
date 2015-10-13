@@ -1,0 +1,74 @@
+.charts {
+    float: left;
+    width: 754px;
+    margin-top: 4%;
+    margin-left: 19%;
+}
+.charts .barchart-ctn {
+    max-width: 100%;
+    width: 600px;
+}
+
+.charts .barchart-ctn,
+.charts .doughnuts-ctn {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.charts .doughnuts-ctn {
+    margin-left: 30px;
+}
+
+.charts .doughnuts-ctn .doughnut {
+    height: 90px;
+    margin: 15px;
+    position: relative;
+    width: 90px;
+}
+
+.charts .doughnuts-ctn .doughnut canvas {
+    position: relative;
+    z-index: 1;
+}
+
+.doughnut .doughnut-label {
+    font-size: 12px;
+    left: 0;
+    padding: 18px 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    color: #fff;
+}
+
+.doughnut .doughnut-count {
+    color: #fff;
+    font-size: 28px;
+}
+
+@media (max-width: 985px) {
+
+    .charts .doughnuts-ctn {
+        margin-left: 0;
+    }
+
+    .charts .doughnuts-ctn .doughnut {
+        display: inline-block;
+        margin: 4px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    .charts .doughnuts-ctn .doughnut {
+        height: 70px;
+        width: 70px;
+    }
+
+    .charts .doughnuts-ctn .doughnut .doughnut-label {
+        padding: 4px 0;
+    }
+
+}
