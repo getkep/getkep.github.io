@@ -54,58 +54,49 @@
 				<p>Conta com sistemas de Rotas, Controles e modelos e a facilidade de conexão com o banco de
 				dados MySQL.</p>
 				<h1 id="installation">Instalação</h1>
-				<p>Faça o download do Kep Framework no topo da página e siga os passos para a configuração.</p>
+				<p>Instalação pelo composer, certifique-se de ter <a href="https://getcomposer.org/">Composer</a> instalado em sua máquina.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>composer require kepphp/kep</span>
+					</span>
+				</div>
 				<h1>Configuração</h1>
-				<p>Para criação basica de uma simples API com Kep Framework é preciso adicionar os arquivos 
-				da framework em uma pasta com qualquer nome, como exemplo "api", assim fica a nossa
-				aplicação.</p>
+				<p>Depois da instalação do Kep com composer em uma pasta, precisamos criar uma nova pasta com qualquer nome(Certifique-se de adicionar este nome na configuração do Kep).</p>
+				<p>Abra a pasta e crie mais 3, com os nomes controllers, models e seeds. a arquitetura de nossa aplicação fica assim:</p>
 				<div class="code docs">
 					<span class="php-line">
 						<span>api/</span>
 					</span>
 					<span class="php-line">
 						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>└─ kep/</span>
+						<span>├─ v1/</span>
+					</span>
+					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  						<span>│</span>
+						<span>&nbsp;&nbsp;</span>
+						<span>├─ controllers/</span>
+					</span>
+					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  						<span>│</span>
+						<span>&nbsp;&nbsp;</span>
+						<span>├─ models/</span>
+					</span>
+					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  						<span>│</span>
+						<span>&nbsp;&nbsp;</span>
+						<span>└─ seeds/</span>
 					</span>
 					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ authentication/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ config/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ controller/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ database/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ headers/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ model/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ route/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ autoload.php</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>└─ kep.php</span>
+						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+						<span>└─ vendor/</span>
 					</span>
 				</div>
-				<p>Acesse a pasta do kep e config, abra o arquivo config.php para configuração de acesso ao
-				banco de dados.</p>
+				<p>Para o Kep, identificar a pasta e efetuar conexão com o banco de dados, precisamos altear o arquivo no diretório.</p>
+				<div class="code docs">
+					<span class="php-line">
+						<span>vendor/kepphp/kep/src/config/config.php</span>
+					</span>
+				</div>
 				<div class="code docs">
 					<span class="php-line">
 						<span class="php-keyword">return</span>
@@ -217,86 +208,6 @@
 					</span>
 				</div>
 				<p>Você pode configurar o nome da pasta onde está localizado a API no 'directory'.</p>
-				<h1>Iniciando API</h1>
-				<p>Para o funcionamento correto de nossa aplicação, criamos um segunda pasta e nomeamos com qualquer nome(O nome é o mesmo digitado na configuração), a estrutura de nossa aplicação fica assim.</p>
-				<div class="code docs">
-					<span class="php-line">
-						<span>api/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ kep/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ authentication/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ config/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ controller/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ database/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ headers/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ model/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ route/</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>├─ autoload.php</span>
-					</span>
-					<span class="php-line"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-  						<span>│</span>
-						<span>&nbsp;&nbsp;</span>
-						<span>└─ kep.php</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>└─ v1/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ controllers/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ models/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ seeds/</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>├─ .htaccess</span>
-					</span>
-					<span class="php-line">
-						<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-						<span>└─ index.php</span>
-					</span>
-				</div>
 				<h1>.htaccess</h1>
 				<p>Para o funcionamento correto da API, precisamos criar urls amigaveis e deixar o Kep cuidar do assunto.</p>
 				<div class="code docs">
