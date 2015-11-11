@@ -110,11 +110,11 @@ app.controller('blogController', function($scope, $http, $location){
 });
 
 app.controller('involvedController', function($scope, $http, $location){
-	$scope.BarLabels = ["01", "02", "03"];
+	$scope.BarLabels = ["01", "02", "03", "04"];
     $scope.BarData = [
-		[1, 9, 10],
-		[1, 1, 1],
-		[6, 1, 1]
+		[1, 9, 10, 10],
+		[1, 1, 1, 2],
+		[6, 1, 1, 1]
 	];
 	$scope.Barcolours = [
       {
@@ -133,9 +133,9 @@ app.controller('involvedController', function($scope, $http, $location){
 	$scope.Docolours = ['#2d2042', '#4f3b6f'];
 	
 	$scope.labels = ["Incomplet", "Complete"];
-	$scope.data = [10, 2];
-	$scope.data2 = [1, 11];
-	$scope.data3 = [1, 11];
+	$scope.data = [10, 3];
+	$scope.data2 = [2, 11];
+	$scope.data3 = [1, 12];
 	
 	$scope.options = {
 		segmentShowStroke : false,
