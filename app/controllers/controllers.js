@@ -105,10 +105,6 @@ app.controller('storeController', function($scope, $http, $location){
 	}
 });
 
-app.controller('blogController', function($scope, $http, $location){
-
-});
-
 app.controller('involvedController', function($scope, $http, $location){
 	$scope.BarLabels = ["01", "02", "03", "04", "05"];
     $scope.BarData = [
