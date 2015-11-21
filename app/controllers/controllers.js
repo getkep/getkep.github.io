@@ -129,9 +129,9 @@ app.controller('involvedController', function($scope, $http, $location){
 	$scope.Docolours = ['#2d2042', '#4f3b6f'];
 	
 	$scope.labels = ["Incomplet", "Complete"];
-	$scope.data = [10, 3];
-	$scope.data2 = [2, 11];
-	$scope.data3 = [1, 12];
+	$scope.data = [10, 4];
+	$scope.data2 = [2, 12];
+	$scope.data3 = [2, 12];
 	
 	$scope.options = {
 		segmentShowStroke : false,
