@@ -110,11 +110,11 @@ app.controller('blogController', function($scope, $http, $location){
 });
 
 app.controller('involvedController', function($scope, $http, $location){
-	$scope.BarLabels = ["01", "02", "03", "04"];
+	$scope.BarLabels = ["01", "02", "03", "04", "05"];
     $scope.BarData = [
-		[1, 9, 10, 10],
-		[1, 1, 1, 2],
-		[6, 1, 1, 1]
+		[1, 9, 10, 10, 10],
+		[1, 1, 1, 2, 2],
+		[6, 1, 1, 1, 2]
 	];
 	$scope.Barcolours = [
       {
