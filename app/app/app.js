@@ -78,7 +78,7 @@ app.config(function($routeProvider, $locationProvider){
    })
    .when('/get-involved', {
       category    : 'get-involved',
-      title       : 'Envolva-se - Kep Framework for PHP',
+      title       : 'Get Involved - Kep Framework for PHP',
       templateUrl : 'app/views/get-involved.html',
       controller  : 'involvedController',
    })
