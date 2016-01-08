@@ -106,11 +106,11 @@ app.controller('storeController', function($scope, $http, $location){
 });
 
 app.controller('involvedController', function($scope, $http, $location){
-	$scope.BarLabels = ["01", "02", "03", "04", "05"];
+	$scope.BarLabels = ["01", "02", "03", "04", "05", "06"];
     $scope.BarData = [
-		[1, 9, 10, 10, 10],
-		[1, 1, 1, 2, 2],
-		[6, 1, 1, 1, 2]
+		[1, 9, 10, 10, 10, 15],
+		[1, 1, 1, 2, 2, 1],
+		[6, 1, 1, 1, 2, 1]
 	];
 	$scope.Barcolours = [
       {
@@ -129,9 +129,9 @@ app.controller('involvedController', function($scope, $http, $location){
 	$scope.Docolours = ['#2d2042', '#4f3b6f'];
 	
 	$scope.labels = ["Incomplet", "Complete"];
-	$scope.data = [10, 4];
-	$scope.data2 = [2, 12];
-	$scope.data3 = [2, 12];
+	$scope.data = [15, 2];
+	$scope.data2 = [1, 14];
+	$scope.data3 = [1, 14];
 	
 	$scope.options = {
 		segmentShowStroke : false,
