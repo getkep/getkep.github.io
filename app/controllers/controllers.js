@@ -97,10 +97,10 @@ app.controller('storeController', function($scope, $http, $location){
 			$scope.Msg = "O carrinho está vazio :/";
 		}else if($scope.value >= 100){
 			$scope.isMsg = true;
-			$scope.Msg = "Uhouuu emprisionante a quantidade de stickers que você deseja, agora teremos café por um bom tempo ;). mais a loja não está pronta ainda :/"
+			$scope.Msg = "Uhouuu emprisionante a quantidade de stickers que você deseja, agora teremos café por um bom tempo ;). mas a loja não está pronta ainda :/"
 		}else{
 			$scope.isMsg = true;
-			$scope.Msg = "Ficamos felizes pelo o seu interesse, mais a loja não está pronta ainda :/"
+			$scope.Msg = "Ficamos felizes pelo o seu interesse, mas a loja não está pronta ainda :/"
 		}
 	}
 });
